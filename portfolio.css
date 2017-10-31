@@ -30,6 +30,7 @@ body{
   position: fixed;
   width: 100%;
   background: rgba(0,0,0, 0.8);
+  padding-right: 1em;
 }
 nav ul {
   display: flex;
@@ -38,7 +39,6 @@ nav ul {
   justify-content: space-around;
   padding: 1em 0;
 }
-
 
 li a {
   text-decoration: none;
@@ -54,8 +54,6 @@ li a:hover {
 
 header {
   height: 100vh;
-  display: flex;
-  flex-direction: row;
   background-image: url("imgs/stars-background.jpg");
   background-size: cover;
   background-position: center;
@@ -67,8 +65,12 @@ header {
 
 h1{
   margin: 0 auto;
-  align-self: center;
   font-size: 5em;
+}
+
+#intro {
+  margin: 0 0 0 17%;
+  padding-top: 80%;
 }
 
 /* ======== Reused padding and backgrounds ======== */
@@ -87,17 +89,21 @@ h1{
 /* ======== Section styles ======== */
 
 .about-text {
-  max-width: 55%;
+  max-width: 80%;
 }
 
 .goals-icons {
   display: flex;
-  justify-content: space-around;
-  padding: 1em;
+  flex-wrap:wrap;
+  align-items: center;
+  align-self: center;
+  padding-top: 1em;
+  padding-right: 3em;
 }
 
-.border-radius {
+.javascript-icon {
   border-radius: 20%;
+  margin:1em 0 0 1em; 
 }
 
 .projects-icons {
@@ -153,13 +159,68 @@ h3 {
   display: inline-block;
 }
 
-#LinkedIn {
+.social{
+  display: block;
   width: 40px;
   float: right;
-  margin-right: 50%;
+  margin-right: 100px;
 }
 
 h3 + p {
   margin: 0;
 }
 
+@media (min-width: 376px) {
+  
+  #intro {
+    margin: 0 0 0 20%;
+    padding-top: 300px;
+  }
+}
+
+@media (min-width: 426px) {
+
+  #intro {
+    margin: 0 0 0 25%;
+    padding-top: 300px;
+  }
+  
+}
+
+@media (min-width: 568px) {
+  
+  header {
+    display: flex;
+    align-items: center;
+  }
+  #intro {
+    margin: 0 auto;
+    padding-top: 0;
+  }
+  
+  .content-padding {
+    padding: 2.5em 0 3em 15%;
+  }
+  
+  .goals-icons {
+    flex-direction: row;
+  }
+  
+}
+
+@media (min-width: 656px) {
+  
+  .about-text {
+    width: 55%;
+    max-width: 700px;
+  }
+  
+  nav ul {
+    justify-content: flex-start;
+  }
+  
+  li a {
+    margin-left: 1em;
+  }
+
+}
