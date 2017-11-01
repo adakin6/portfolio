@@ -31,6 +31,8 @@ body{
   width: 100%;
   background: rgba(0,0,0, 0.8);
   padding-right: 1em;
+  z-index: 999;
+
 }
 nav ul {
   display: flex;
@@ -108,14 +110,17 @@ h1{
 
 .projects-icons {
   display: flex;
-  justify-content: space-around;
-  padding: 2em;
+  justify-content: space-between;
+  padding: 2em 10% 0 0;
   position: relative;
+  flex-direction: column;
+  align-items: center;
 }
 
 .project-container {
   position: relative;
-  width: 40%;
+  width: 70%;
+  margin: 5%;
 }
 
 .project {
@@ -163,7 +168,8 @@ h3 {
   display: block;
   width: 40px;
   float: right;
-  margin-right: 100px;
+  margin-right: 10%;
+
 }
 
 h3 + p {
@@ -222,5 +228,47 @@ h3 + p {
   li a {
     margin-left: 1em;
   }
+  
+  .projects-icons {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .project-container {
+    width: 350px;
+    height: 263px;
+  }
 
 }
+
+@media (min-width: 1000px) {
+  
+  .content-padding {
+    padding: 2.5em 0 3em 0;
+    text-align: center;
+  }
+  
+  .about-text {
+    margin:0 auto ;
+  }
+  
+  .goals-icons {
+    padding: 0;
+    justify-content: space-around;
+  }
+  
+  .projects-icons {
+    padding: 2em 0 0 0;
+    justify-content: space-around;
+  }
+  
+  #contact {
+    text-align: left;
+    padding-left: 10%;
+  }
+  
+}
+
+
+}
+
